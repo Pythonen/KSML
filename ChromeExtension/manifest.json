@@ -9,19 +9,22 @@
 
   "content_scripts": [
     {
-      "matches": [
-        "ksml.fi/paakirjoitus/*",
-        "ksml.fi/kotimaa/*",
-        "ksml.fi/talous/*",
-        "ksml.fi/ulkomaat/*",
-        "ksml.fi/urheilu/*",
-        "ksml.fi/tanaan/*",
-        "ksml.fi/kulttuuri/*",
-        "ksml.fi/mielipide/*"
-      ],
-      "js": "action.js"
+      "matches": ["*://*.ksml.fi/*"],
+      "include_globs": [
+        "*ksml.fi/paakirjoitus/*/*",
+        "*ksml.fi/kotimaa/*/*",
+        "*ksml.fi/talous/*/*",
+        "*ksml.fi/ulkomaat/*/*",
+        "*ksml.fi/urheilu/*/*",
+        "*ksml.fi/tanaan/*/*",
+        "*ksml.fi/kulttuuri/*/*",
+        "*ksml.fi/mielipide/*/*"],
+      "exclude_globs": ["*pwbi*"],
+      "js": ["action.js"]
     }
   ],
 
-  "permissions": ["ksml.fi/*"]
+  "permissions": [
+    "*://ksml.fi/*",
+    "tabs"]
 }
