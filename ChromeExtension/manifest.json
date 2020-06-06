@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "fuckKSML",
+  "version": "1.0",
+  "description": "Bypass KSML paywall",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "ksml.fi/paakirjoitus/*",
+        "ksml.fi/kotimaa/*",
+        "ksml.fi/talous/*",
+        "ksml.fi/ulkomaat/*",
+        "ksml.fi/urheilu/*",
+        "ksml.fi/tanaan/*",
+        "ksml.fi/kulttuuri/*",
+        "ksml.fi/mielipide/*"
+      ],
+      "js": "action.js"
+    }
+  ],
+
+  "permissions": ["ksml.fi/*"]
+}
