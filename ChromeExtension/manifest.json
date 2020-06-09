@@ -18,13 +18,17 @@
         "*ksml.fi/urheilu/*/*",
         "*ksml.fi/tanaan/*/*",
         "*ksml.fi/kulttuuri/*/*",
-        "*ksml.fi/mielipide/*/*"],
+        "*ksml.fi/mielipide/*/*"
+      ],
       "exclude_globs": ["*pwbi*"],
       "js": ["action.js"]
     }
   ],
 
-  "permissions": [
-    "*://ksml.fi/*",
-    "tabs"]
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": ["*://ksml.fi/*", "tabs"]
 }
