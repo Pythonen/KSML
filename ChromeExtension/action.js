@@ -1,11 +1,9 @@
-chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-    let url = tabs[0].url
-    //console.log(url);
-    fetch(url).then(r => r.text()).then(result => {
-        console.log(result)
-    })  
-    .catch(err => console.log(err));
-    
-});
+/* 
+chrome.runtime.onMessage.addListener(gotUrl);
 
-
+function gotUrl(message, sender, sendResponse){
+  let url = message.replace("<!-- ", "");
+  let finalurl = url.replace(" -->", "");
+  console.log(finalurl);
+  chrome.tabs.create({'url': finalurl});
+} */
