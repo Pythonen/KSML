@@ -2,7 +2,6 @@
 from urllib.request import Request, urlopen
 import re
 import webbrowser
-from playsound import playsound
 import time
 
 user_agent = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3'
@@ -41,5 +40,4 @@ sivu = alku + match
 print(sivu)
 
 webbrowser.open(sivu)
-playsound('https://www.myinstants.com/media/sounds/pornhub-community-intro.mp3')
 time.sleep(3)
