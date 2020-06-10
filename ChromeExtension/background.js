@@ -10,12 +10,9 @@ function fetchUrl(tab) {
       //console.log(result);
       let array = [...result.matchAll(re)];
       //console.log(array.join());
-      let finalurl = array[0][0];
-      let finalurl1 = finalurl.replace("<!-- ", "");
-      let finalurl2 = finalurl1.replace(" -->", "");
-      console.log(finalurl2);
-      //return finalurl;
-      chrome.tabs.create({'url': finalurl2});
+      let finalurl = array[0][0].replace("<!-- ", "").replace(" -->", "");
+      console.log(finalurl);
+      chrome.tabs.create({'url': finalurl});
     })
     .catch((err) => console.log(err));
   });
